@@ -14,12 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
+//Route::get('dashboard', 'UserController@dashboard')->middleware('auth');
+Route::get('dashboard', 'RssFeedController@list');
 
-Route::get('dashboard', 'UserController@dashboard')->middleware('auth');
-Route::get('teszt', 'UserController@dashboard')->middleware('auth');
+Route::post('dashboard', 'RssFeedController@save');
