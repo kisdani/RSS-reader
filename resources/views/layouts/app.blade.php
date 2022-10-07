@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow-sm">
             <div class="container">
                 <div class="navbar-brand">
-                    {{ __('Rss Reader')}}
+                    {{ __('RSS Reader')}}
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -54,7 +54,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link"  href="{{ route('dashboard') }}">{{ __('Rss Dashboard') }}</a>
+                                <a class="nav-link"  href="{{ route('dashboard') }}">{{ __('RSS Dashboard') }}</a>
                             </li>
 
                             <li class="nav-item">

@@ -30,13 +30,13 @@
             @endforeach
         @else
             <div class="d-flex align-items-center justify-content-center vh-100">
-                <div class="text-center">
+                <div class="text-center empty-feed">
                     <h1 class="display-1 fw-bold"><i class="bi bi-rss"></i></h1>
-                    <p class="fs-3"> <span class="text-danger">Opps!</span> Page not found.</p>
+                    <p class="fs-3"> <span class="text-danger">Opps!</span> RSS URL not found.</p>
                     <p class="lead">
-                        The page you’re looking for doesn’t exist.
+                        It looks like no feed link has been added.
                     </p>
-                    <a href="index.html" class="btn btn-primary">Go Home</a>
+                    <a href="{{route('dashboard')}}" class="btn btn-primary">Go to Dashboard</a>
                 </div>
             </div>
         @endif

@@ -17,6 +17,9 @@ button .save {
 .news .card {
   margin: 0 0 2em;
 }
+.news .empty-feed {
+  margin: -20em 0 0;
+}
 
 html {
   padding: 5em 0 0;
