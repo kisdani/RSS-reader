@@ -16,6 +16,7 @@ class CreateRssFeedsTable extends Migration
         Schema::create('rss_feeds', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned()->index('fk_user_rss_feeds');
+            $table->string('name');
             $table->string('url');
             $table->timestamps();
             $table->softDeletes();

@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 //Route::get('dashboard', 'UserController@dashboard')->middleware('auth');
-Route::get('dashboard', 'RssFeedController@list');
+Route::get('dashboard', 'RssFeedController@list')->name('dashboard');
+Route::get('news', 'NewsController@list');
 
 Route::post('dashboard', 'RssFeedController@save');
+Route::delete('delete/{id}', 'RssFeedController@delete');

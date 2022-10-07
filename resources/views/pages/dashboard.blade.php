@@ -11,10 +11,10 @@
                         <form method="POST">
                             @csrf
                             <div class="form-group">
-                                <label for="exampleInputPassword1">URL</label>
-                                <input type="url" class="form-control" name="url" id="exampleInputPassword1" placeholder="Site Url">
+                                <label for="rssUrl">Sites</label>
+                                <input type="url" class="form-control" name="url" id="rssUrl" placeholder="Site Url" required>
                             </div><br>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary gap-2 d-md-flex justify-content-md-end">Submit</button>
                         </form>
                     </div>
             </div>
@@ -24,20 +24,27 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col">User</th>
-                        <th scope="col">Url</th>
+                        <th scope="col">Site Name</th>
+                        <th scope="col" colspan="2">Site Url</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($sites as $site)
                         <tr>
-                            <td>{{$site->user_id}}</td>
-                            <td>{{$site->url}}</td>
+                            <td class="align-middle">{{$site->name}}</td>
+                            <td class="align-middle">{{$site->url}}</td>
+                            <td class="text-center">
+                                <form method="POST" action="{{url('delete/'.$site->id)}}">
+                                    @method('delete')
+                                    @csrf
+                                    <button type="subbmit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
          </div>
-
+    
 @endsection
