@@ -8,20 +8,21 @@
                 <div class="card">
                     <div class="card-header">Add Rss</div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form method="POST" class="save">
                             @csrf
                             <div class="form-group">
-                                <label for="rssUrl">Sites</label>
-                                <input type="url" class="form-control" name="url" id="rssUrl" placeholder="Site Url" required>
+                                <input type="url" class="form-control" name="url" id="rssUrl" placeholder="Site Rss Url..." required>
                             </div><br>
-                            <button type="submit" class="btn btn-primary gap-2 d-md-flex justify-content-md-end">Submit</button>
+                            <div class="d-grid gap-2 col-2 mx-auto">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
                         </form>
                     </div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <table class="table table-striped">
+                <table class="table table-striped rounded sites">
                     <thead>
                     <tr>
                         <th scope="col">Site Name</th>

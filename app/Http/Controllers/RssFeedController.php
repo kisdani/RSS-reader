@@ -31,7 +31,11 @@ class RssFeedController extends Controller
     public function list(){
        $sites = RssFeed::get();
 
-       return view('pages/dashboard', ['sites'=>$sites]);
+        if($sites!=""){
+            return view('pages/dashboard', ['sites'=>$sites]);
+        }else{
+            return view('pages/dashboard');
+        }
     }
 
     public function delete($id){

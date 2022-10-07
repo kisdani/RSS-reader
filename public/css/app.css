@@ -1,5 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8"; /*!
+@charset "UTF-8";
+button .save {
+  width: 120px !important;
+}
+
+.save {
+  margin: 0.5em 0 0;
+}
+
+.sites {
+  margin: 2em 0 0;
+  border: 1px solid silver;
+  background: white;
+}
+
+.news .card {
+  margin: 0 0 2em;
+}
+
+/*!
  * Bootstrap  v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
