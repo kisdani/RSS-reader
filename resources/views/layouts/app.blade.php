@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow-sm">
             <div class="container">
                 <div class="navbar-brand">
                     {{ __('Rss Reader')}}
@@ -54,7 +54,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link"  href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
+                                <a class="nav-link"  href="{{ route('dashboard') }}">{{ __('Rss Dashboard') }}</a>
                             </li>
 
                             <li class="nav-item">

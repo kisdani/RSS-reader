@@ -3,6 +3,17 @@
 @section('content')
 
     <div class="container">
+
+        @if(session()->get('error'))
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-danger" role="alert">
+                        {{ session()->get('error') }}
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -30,12 +41,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($sites as $site)
+                    @foreach ($feeds as $feed)
                         <tr>
-                            <td class="align-middle">{{$site->name}}</td>
-                            <td class="align-middle">{{$site->url}}</td>
+                            <td class="align-middle">{{$feed->name}}</td>
+                            <td class="align-middle">{{$feed->url}}</td>
                             <td class="text-center">
-                                <form method="POST" action="{{url('delete/'.$site->id)}}">
+                                <form method="POST" action="{{url('delete/'.$feed->id)}}">
                                     @method('delete')
                                     @csrf
                                     <button type="subbmit" class="btn btn-danger">Delete</button>

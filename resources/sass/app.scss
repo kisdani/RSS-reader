@@ -4,9 +4,11 @@
 //Pages
 @import 'pages/dashboard';
 @import 'pages/news';
+@import 'pages/main';
 
 // Variables
-@import 'variables';
+@import 'assets/variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons';
