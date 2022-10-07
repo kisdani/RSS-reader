@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('home', 'HomeController@index')->middleware('auth')->name('home');
 
 Auth::routes();
-
-Route::get('home', 'HomeController@index')->name('home');
+Route::get('news', 'NewsController@list')->name('news')->middleware('auth');
 //Route::get('dashboard', 'UserController@dashboard')->middleware('auth');
-Route::get('dashboard', 'RssFeedController@list')->name('dashboard');
-Route::get('news', 'NewsController@list');
+Route::get('dashboard', 'RssFeedController@list')->name('dashboard')->middleware('auth');
+Route::get('news', 'NewsController@list')->name('news')->middleware('auth');
 
-Route::post('dashboard', 'RssFeedController@save');
-Route::delete('delete/{id}', 'RssFeedController@delete');
+Route::post('dashboard', 'RssFeedController@save')->middleware('auth');;
+Route::delete('delete/{id}', 'RssFeedController@delete')->middleware('auth');;

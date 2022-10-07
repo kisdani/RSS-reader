@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <h3>Welcome {{ Auth::user()->name }}!</h3>
+                    <p>{{ __('You are logged in!') }}</p>
                 </div>
             </div>
         </div>
