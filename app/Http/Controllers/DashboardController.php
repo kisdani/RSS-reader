@@ -7,7 +7,7 @@ use Auth;
 
 use Illuminate\Http\Request;
 
-class RssFeedController extends Controller
+class DashboardController extends Controller
 {
     public function registerForm(){
         return view('pages/register');

@@ -20,7 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('home', 'HomeController@index');
 Route::get('news', 'NewsController@list')->name('news')->middleware('auth');
-Route::get('dashboard', 'RssFeedController@list')->name('dashboard')->middleware('auth');
+Route::get('dashboard', 'DashboardController@list')->name('dashboard')->middleware('auth');
 
-Route::post('dashboard', 'RssFeedController@save')->middleware('auth');
-Route::delete('delete/{id}', 'RssFeedController@delete')->middleware('auth');
+Route::post('dashboard', 'DashboardController@save')->middleware('auth');
+Route::delete('delete/{id}', 'DashboardController@delete')->middleware('auth');
